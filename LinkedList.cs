@@ -5,7 +5,6 @@ namespace LinkedList
 
     public class LinkedList
     {
-
        
             public Node head;
             public void Add(int data)
@@ -27,7 +26,7 @@ namespace LinkedList
                 Console.WriteLine("{0} inserted into linked list", node.data);
 
             }
-            public void AddInReverseOrder(int data)            // To Display Add Elements In Reverse Order
+            public void AddInReverseOrder(int data)            // To Add Elements In Reverse Order
             {
                 Node newNode = new Node(data);
                 if (this.head == null)
@@ -55,11 +54,26 @@ namespace LinkedList
                 }
                 return count;
             }
+            public void Append(int data)
+            {
+                Node node = new Node(data);
+                if (head == null)
+                {
+                    head = node;
+                }
+                else
+                {
+                    Node temp = head;
+                    while (temp.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = node;
+                }
+            }
             public void InsertNode(int position, int data)
             {
                 var newnode = new Node(data);
-                //newnode.next = this.head;
-                //head = newnode;
                 newnode.data = data;
                 newnode.next = this.head;
                 if (position < 1)
@@ -81,11 +95,23 @@ namespace LinkedList
                         node1 = node1.next;
                         position--;
                     }
-                   
                     newnode.next = node1.next;
                     node1.next = newnode;
 
                 }
+            }
+            public Node Pop()                                   // To Delete First number 
+            {
+                Node node = head;
+                if (head == null)
+                {
+                    Console.WriteLine("Linked List is Empty");
+                }
+                else
+                {
+                    head = head.next;
+                }
+                return node;
             }
             public void Display()
             {
@@ -102,6 +128,7 @@ namespace LinkedList
                 }
             }
         
+
     }
 }
 
