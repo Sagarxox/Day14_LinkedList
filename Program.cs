@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LinkedList
 {
@@ -9,7 +10,8 @@ namespace LinkedList
 
         static void Main(string[] args)
         {
-            Console.WriteLine("please enter your choice: \n1.add number \n2.add number reverse order\n3.insert no\n4.Append\n5.Delete First no\n6.Delete Last\n7.search\n");
+            Console.WriteLine("please enter your choice: \n1.add number \n2.add number reverse order\n3.insert no\n4.Append\n5.Delete First no\n6.Delete Last\n7.search");
+            Console.Write("8.To insert 40 after 30");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -67,8 +69,15 @@ namespace LinkedList
                     Console.WriteLine("index of 30 is" + a);
                     break;
 
+                case 8:
+                    LinkedList LinkedList7 = new LinkedList();
+                    LinkedList7.Add(56);
+                    LinkedList7.Add(30);
+                    LinkedList7.Add(70);
+                    LinkedList7.InsertNode(3,40);
+                    LinkedList7.Display();
 
-
+                    break;
             }
 
 
