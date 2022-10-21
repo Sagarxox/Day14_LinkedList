@@ -11,7 +11,9 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("please enter your choice: \n1.add number \n2.add number reverse order\n3.insert no\n4.Append\n5.Delete First no\n6.Delete Last\n7.search");
-            Console.Write("8.To insert 40 after 30");
+            Console.Write("8.To insert 40 after 30 \n");
+            Console.Write("9. to delete 40 after 30 from list");
+            Console.WriteLine("\t");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -77,6 +79,19 @@ namespace LinkedList
                     LinkedList7.InsertNode(3,40);
                     LinkedList7.Display();
 
+                    break;
+                case 9:
+                    LinkedList linkedList9 = new LinkedList();
+                    linkedList9.Add(56);
+                    linkedList9.Add(30);
+                    linkedList9.Add(70);
+                    Console.WriteLine("\n after adding 40 after 30");
+                    linkedList9.InsertNode(3, 40);
+                    linkedList9.Display();
+                    Console.WriteLine(  "\n deleting 40 from list9");
+                    linkedList9.pop_at(3);
+                    linkedList9.Size();
+                    linkedList9.Display();
                     break;
             }
 
