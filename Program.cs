@@ -9,7 +9,7 @@ namespace LinkedList
 
         static void Main(string[] args)
         {
-            Console.WriteLine("please enter your choice: \n1.add number \n2.add number reverse order\n3.insert no\n4.Append\n5.Delete First no\n6.Delete Last no");
+            Console.WriteLine("please enter your choice: \n1.add number \n2.add number reverse order\n3.insert no\n4.Append\n5.Delete First no\n6.Delete Last\n7.search\n");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -58,7 +58,15 @@ namespace LinkedList
                     linkedList5.PopLast();
                     linkedList5.Display();
                     break;
-               
+                case 7:
+                    LinkedList linkedList6 = new LinkedList();
+                    linkedList6.Add(56);
+                    linkedList6.Add(30);
+                    linkedList6.Add(70);
+                    int a = linkedList6.Search(30);
+                    Console.WriteLine("index of 30 is" + a);
+                    break;
+
 
 
             }
