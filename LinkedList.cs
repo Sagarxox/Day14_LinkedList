@@ -2,9 +2,9 @@
 
 namespace LinkedList
 {
-
     public class LinkedList
     {
+
         public Node head;
         public void Add(int data)
         {
@@ -112,7 +112,7 @@ namespace LinkedList
             }
             return node;
         }
-        public Node PopLast()                               //  To Delete Last Element in Linked List 
+        public Node PopLast()                               // To Delete Last Element in Linked List 
         {
             if (head == null)
             {
@@ -145,7 +145,4 @@ namespace LinkedList
             }
         }
     }
-
-
 }
-
