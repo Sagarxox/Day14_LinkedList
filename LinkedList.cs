@@ -48,6 +48,26 @@ namespace LinkedList
             Console.WriteLine("{0} inserted into linked list  ", newNode.data);
         }
 
+        //Append        
+
+        public void Append(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node node1 = head;
+                while (node1.next != null)
+                {
+                    node1 = node1.next;
+                }
+                node1.next = node;
+            }
+        }
+
         public void Display()
         {
             Node temp = this.head;
