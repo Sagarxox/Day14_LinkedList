@@ -143,6 +143,65 @@ namespace LinkedList
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
+
         }
+
+
+        public void pop_at(int position)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("\nposition should be >= 1.");
+            }
+            else if (position == 1 && head != null)
+            {
+                Node nodeToDelete = head;
+                head = head.next;
+                nodeToDelete = null;
+            }
+            else
+            {
+                Node temp = new Node();
+                temp = head;
+                for (int i = 1; i < position - 1; i++)
+                {
+                    if (temp != null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if (temp != null && temp.next != null)
+                {
+                    Node nodeToDelete = temp.next;
+                    temp.next = temp.next.next;
+                    nodeToDelete = null;
+                }
+                else
+                {
+                    Console.WriteLine("\nThe node is already null");
+                }
+            }
+
+        }
+
+        public void Size() //linklist size
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked list is Empty");
+                return;
+            }
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine(" \n Size of Linked List:" + count);
+        }
+
+
     }
+
 }
